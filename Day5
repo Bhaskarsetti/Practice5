@@ -1,0 +1,130 @@
+package TrailJavaPractice;
+import java.util.*;
+
+public class Practice5 {
+	public void Registation() {
+		Scanner obj1 = new Scanner(System.in);
+		System.out.println("Enter your name ");
+		String name = obj1.nextLine();
+		System.out.println("Enter Your Mobile Number");
+		int mobile = obj1.nextInt();
+		System.out.println("1.INDIA"+"\n"+
+		                   "2.USA"+"\n"+
+			               "3.RUSSIA"+"\n"+
+		                   "4.JAPAN"+"\n"+
+			               "5.CHAINA");
+		System.out.println("Select your country ");
+		int c = obj1.nextInt();
+		switch (c) {
+		case 1 : System.out.println("INDIA ");
+		break;
+		case 2 : System.out.println("USA ");
+		break;
+		case 3 : System.out.println("RUSSIA ");
+		break;
+		case 4 : System.out.println("JAPAN ");
+		break;
+		case 5 : System.out.println("CHAINA ");
+		break;
+		default : System.out.println("Please Select Your Country ");
+		}
+	}
+	public static void login() {
+		Scanner obj2 = new Scanner(System.in);
+		System.out.println("Enter your User Name");
+		String name = obj2.nextLine();
+		System.out.println("Enter your Password");
+		String pass  =obj2.nextLine();
+		System.out.println("Login Succesfull");
+		
+	}
+	public void Subscribe() {
+		Scanner obj3 = new  Scanner(System.in);
+		System.out.println("Entery your Email Address Below And click on SubScribe button");
+		String email = obj3.nextLine();
+		System.out.println("Your Subscripition is Done"+ "\n"+"Thank you");
+	}
+	public void Help() {
+		Scanner obj4 = new Scanner(System.in);
+		System.out.println("Slecte the one number from 1 , 2 3    ");
+		int x = obj4.nextInt();
+		if (x==1) {
+			for(int p=0;p<10;p++) {
+				System.out.println(p+"*"+p+"="+p*p);
+			}
+		}
+		else if (x==2) {
+			int q =0 ;
+			while(q<100) {
+				System.out.println(q+"*"+q+"="+q*q);
+				q=q+10;
+			}
+		}
+		else {
+			int n =0;
+			do  {
+				System.out.println(n+"*"+n+"="+n*n);
+				n=n+100;
+			}while(n<1000);
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Control statments
+		
+		// Selector or Decission type
+		
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Please Enter yoppur Name and Email address");
+		String name = obj.nextLine();
+		String email = obj.nextLine();
+		
+		System.out.println("Hello Miss./ Mr. "+name+"\n"+
+		"Please Verify the Email What you Entered"+"\n"+email);
+		
+		System.out.println("Select the below one of my services ");
+		for (int i =0;i<6;i++) {
+			switch (i) {
+			case 0 :System.out.println("1.Register into the our web site ");
+			break;
+			case 1 :System.out.println("2.login into the our web site ");
+			break;
+			case 2 :System.out.println("3.Subscribe our page");
+			break;
+			case 3 :System.out.println("4. Creat your Profile in our web site ");
+			break;
+			case 4 :System.out.println("5.Contact To My Custmore care ");
+			continue;
+			default : System.out.println("6.Help");
+			
+			}
+			
+		}
+		
+		int k =obj.nextInt();
+		Practice5 R=new Practice5();
+		
+		if ( k ==1) {
+			R.Registation();
+		}
+		else if ( k == 2) {
+			login();
+			
+		}
+		else if (k == 3) {
+			R.Subscribe();
+			
+		}
+		else if (k==4) {
+			R.Help();
+		}
+		else{
+			System.out.println("Thank you for Reaching out");
+		}
+		
+
+	}
+
+}
